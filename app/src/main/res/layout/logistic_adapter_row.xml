@@ -21,41 +21,42 @@
             android:id="@+id/dateTextView"
             android:layout_width="89dp"
             android:layout_height="26dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="8dp"
             android:fontFamily="sans-serif-black"
             android:textColor="@color/black"
             android:textSize="16sp"
-            card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/hourTextView"
             tools:text="23/02/2022" />
 
         <TextView
             android:id="@+id/hourTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="16:30"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="8dp"
             android:fontFamily="sans-serif-light"
             android:textColor="@color/black"
-            card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toTopOf="parent" />
+            card_view:layout_constraintStart_toEndOf="@+id/textView10"
+            card_view:layout_constraintTop_toTopOf="@+id/textView10"
+            tools:text="16:30" />
 
         <TextView
             android:id="@+id/handlingFunctionsTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            card_view:layout_constraintEnd_toEndOf="@+id/dateTextView"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Handling functions: "
+            card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="@+id/dateTextView"
-            card_view:layout_constraintTop_toBottomOf="@+id/dateTextView"
-            tools:text="Handling functions: " />
+            card_view:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/fullTimeEmployeesTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Full time employees: "
+            android:fontFamily="sans-serif-black"
+            android:text="Full time employees: "
             card_view:layout_constraintEnd_toEndOf="@+id/handlingFunctionsTextView"
             card_view:layout_constraintStart_toStartOf="@+id/handlingFunctionsTextView"
             card_view:layout_constraintTop_toBottomOf="@+id/handlingFunctionsTextView" />
@@ -64,7 +65,8 @@
             android:id="@+id/partTimeEmployeesTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Part time employees:"
+            android:fontFamily="sans-serif-black"
+            android:text="Part time employees: "
             card_view:layout_constraintEnd_toEndOf="@+id/fullTimeEmployeesTextView"
             card_view:layout_constraintStart_toStartOf="@+id/fullTimeEmployeesTextView"
             card_view:layout_constraintTop_toBottomOf="@+id/fullTimeEmployeesTextView" />
@@ -73,7 +75,8 @@
             android:id="@+id/totalEmployeesTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Total employees:"
+            android:fontFamily="sans-serif-black"
+            android:text="Total employees: "
             card_view:layout_constraintEnd_toEndOf="@+id/partTimeEmployeesTextView"
             card_view:layout_constraintStart_toStartOf="@+id/partTimeEmployeesTextView"
             card_view:layout_constraintTop_toBottomOf="@+id/partTimeEmployeesTextView" />
@@ -82,7 +85,8 @@
             android:id="@+id/fullTimeEmployeesCostTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Full time employees cost:"
+            android:fontFamily="sans-serif-black"
+            android:text="Full time employees cost:  "
             card_view:layout_constraintEnd_toEndOf="@+id/totalEmployeesTextView"
             card_view:layout_constraintStart_toStartOf="@+id/totalEmployeesTextView"
             card_view:layout_constraintTop_toBottomOf="@+id/totalEmployeesTextView" />
@@ -91,7 +95,8 @@
             android:id="@+id/partTimeEmployeesCostTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Part time employees cost:"
+            android:fontFamily="sans-serif-black"
+            android:text="Part time employees cost: "
             card_view:layout_constraintEnd_toEndOf="@+id/fullTimeEmployeesCostTextView"
             card_view:layout_constraintStart_toStartOf="@+id/fullTimeEmployeesCostTextView"
             card_view:layout_constraintTop_toBottomOf="@+id/fullTimeEmployeesCostTextView" />
@@ -100,10 +105,86 @@
             android:id="@+id/totalCostTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Total cost"
+            android:fontFamily="sans-serif-black"
+            android:text="Total cost: "
             card_view:layout_constraintEnd_toEndOf="@+id/partTimeEmployeesCostTextView"
             card_view:layout_constraintStart_toStartOf="@+id/partTimeEmployeesCostTextView"
             card_view:layout_constraintTop_toBottomOf="@+id/partTimeEmployeesCostTextView" />
+
+        <TextView
+            android:id="@+id/handlingFunctionsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            card_view:layout_constraintBottom_toTopOf="@+id/fullTimeEmployeesTextView"
+            card_view:layout_constraintStart_toEndOf="@+id/handlingFunctionsTextView"
+            card_view:layout_constraintTop_toTopOf="@+id/handlingFunctionsTextView" />
+
+        <TextView
+            android:id="@+id/fulltimeEmployeesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:text="TextView"
+            card_view:layout_constraintBottom_toTopOf="@+id/partTimeEmployeesTextView"
+            card_view:layout_constraintStart_toEndOf="@+id/fullTimeEmployeesTextView"
+            card_view:layout_constraintTop_toBottomOf="@+id/handlingFunctionsTextView" />
+
+        <TextView
+            android:id="@+id/parttimeEmployeesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="TextView"
+            card_view:layout_constraintBottom_toTopOf="@+id/totalEmployeesTextView"
+            card_view:layout_constraintStart_toEndOf="@+id/partTimeEmployeesTextView"
+            card_view:layout_constraintTop_toBottomOf="@+id/fullTimeEmployeesTextView" />
+
+        <TextView
+            android:id="@+id/totalEmployeesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            card_view:layout_constraintBottom_toBottomOf="@+id/totalEmployeesTextView"
+            card_view:layout_constraintStart_toEndOf="@+id/totalEmployeesTextView"
+            card_view:layout_constraintTop_toBottomOf="@+id/partTimeEmployeesTextView" />
+
+        <TextView
+            android:id="@+id/fulltimeEmployeesCostText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            card_view:layout_constraintStart_toEndOf="@+id/fullTimeEmployeesCostTextView"
+            card_view:layout_constraintTop_toBottomOf="@+id/totalEmployeesText" />
+
+        <TextView
+            android:id="@+id/parttimeEmployeesCostText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:text="TextView"
+            card_view:layout_constraintStart_toEndOf="@+id/partTimeEmployeesCostTextView"
+            card_view:layout_constraintTop_toBottomOf="@+id/fulltimeEmployeesCostText" />
+
+        <TextView
+            android:id="@+id/TotalCostText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            card_view:layout_constraintStart_toEndOf="@+id/totalCostTextView"
+            card_view:layout_constraintTop_toBottomOf="@+id/partTimeEmployeesCostTextView" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Hour:"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

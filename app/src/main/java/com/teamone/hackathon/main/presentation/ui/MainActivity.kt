@@ -44,16 +44,5 @@ class MainActivity : AppCompatActivity() {
                 if (logistics != null) { loadLogistics(data = logistics) }
             }
         }
-        binding.searchButton.setOnClickListener {
-            lifecycleScope.launch {
-                mainViewModel.fetchLogisticsDataByDate(
-                    binding.tieFirstDate.toString(),
-                    binding.tieSecondDate.toString()
-                )
-                mainViewModel.logistics.collect { logistics ->
-                    if (logistics != null) { loadLogistics(data = logistics) }
-                }
-            }
-        }
     }
 }

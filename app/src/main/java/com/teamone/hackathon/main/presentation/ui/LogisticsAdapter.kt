@@ -36,13 +36,13 @@ class LogisticsAdapter(
 
         private val hour: TextView by lazy { itemView.findViewById(R.id.hourTextView) }
         private val date: TextView by lazy { itemView.findViewById(R.id.dateTextView) }
-        private val handlingFunctions: TextView by lazy { itemView.findViewById(R.id.handlingFunctionsTextView) }
-        private val fullTimeEmployees: TextView by lazy { itemView.findViewById(R.id.fullTimeEmployeesTextView) }
-        private val partTimeEmployees: TextView by lazy { itemView.findViewById(R.id.partTimeEmployeesTextView) }
-        private val totalEmployees: TextView by lazy { itemView.findViewById(R.id.totalEmployeesTextView) }
-        private val fullTimeEmployeesCost: TextView by lazy { itemView.findViewById(R.id.fullTimeEmployeesCostTextView) }
-        private val partTimeEmployeesCost: TextView by lazy { itemView.findViewById(R.id.partTimeEmployeesCostTextView) }
-        private val totalCost: TextView by lazy { itemView.findViewById(R.id.totalCostTextView) }
+        private val handlingFunctions: TextView by lazy { itemView.findViewById(R.id.handlingFunctionsText) }
+        private val fullTimeEmployees: TextView by lazy { itemView.findViewById(R.id.fulltimeEmployeesText) }
+        private val partTimeEmployees: TextView by lazy { itemView.findViewById(R.id.parttimeEmployeesText) }
+        private val totalEmployees: TextView by lazy { itemView.findViewById(R.id.totalEmployeesText) }
+        private val fullTimeEmployeesCost: TextView by lazy { itemView.findViewById(R.id.fulltimeEmployeesCostText) }
+        private val partTimeEmployeesCost: TextView by lazy { itemView.findViewById(R.id.parttimeEmployeesCostText) }
+        private val totalCost: TextView by lazy { itemView.findViewById(R.id.TotalCostText) }
 
         fun bindData(logistic: Logistic) {
             hour.text = logistic.hour.toString()

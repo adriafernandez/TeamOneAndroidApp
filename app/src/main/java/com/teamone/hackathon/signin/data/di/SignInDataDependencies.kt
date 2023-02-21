@@ -3,6 +3,7 @@ package com.teamone.hackathon.main.data.di
 import com.teamone.hackathon.main.data.datasource.LoginDataSource
 import com.teamone.hackathon.main.data.datasource.SignInDataSource
 import com.teamone.hackathon.main.data.datasource.SignInDataSource.Remote
+import com.teamone.hackathon.main.data.repository.SignInRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
