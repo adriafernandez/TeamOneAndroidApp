@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:elevation="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    card_view:cardCornerRadius="15dp"
+    card_view:cardBackgroundColor="#ffcc00">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="89dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            tools:text="23/02/2022" />
+
+        <TextView
+            android:id="@+id/hourTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="16:30"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/handlingFunctionsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintEnd_toEndOf="@+id/dateTextView"
+            card_view:layout_constraintStart_toStartOf="@+id/dateTextView"
+            card_view:layout_constraintTop_toBottomOf="@+id/dateTextView"
+            tools:text="Handling functions: " />
+
+        <TextView
+            android:id="@+id/fullTimeEmployeesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Full time employees: "
+            card_view:layout_constraintEnd_toEndOf="@+id/handlingFunctionsTextView"
+            card_view:layout_constraintStart_toStartOf="@+id/handlingFunctionsTextView"
+            card_view:layout_constraintTop_toBottomOf="@+id/handlingFunctionsTextView" />
+
+        <TextView
+            android:id="@+id/partTimeEmployeesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Part time employees:"
+            card_view:layout_constraintEnd_toEndOf="@+id/fullTimeEmployeesTextView"
+            card_view:layout_constraintStart_toStartOf="@+id/fullTimeEmployeesTextView"
+            card_view:layout_constraintTop_toBottomOf="@+id/fullTimeEmployeesTextView" />
+
+        <TextView
+            android:id="@+id/totalEmployeesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Total employees:"
+            card_view:layout_constraintEnd_toEndOf="@+id/partTimeEmployeesTextView"
+            card_view:layout_constraintStart_toStartOf="@+id/partTimeEmployeesTextView"
+            card_view:layout_constraintTop_toBottomOf="@+id/partTimeEmployeesTextView" />
+
+        <TextView
+            android:id="@+id/fullTimeEmployeesCostTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Full time employees cost:"
+            card_view:layout_constraintEnd_toEndOf="@+id/totalEmployeesTextView"
+            card_view:layout_constraintStart_toStartOf="@+id/totalEmployeesTextView"
+            card_view:layout_constraintTop_toBottomOf="@+id/totalEmployeesTextView" />
+
+        <TextView
+            android:id="@+id/partTimeEmployeesCostTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Part time employees cost:"
+            card_view:layout_constraintEnd_toEndOf="@+id/fullTimeEmployeesCostTextView"
+            card_view:layout_constraintStart_toStartOf="@+id/fullTimeEmployeesCostTextView"
+            card_view:layout_constraintTop_toBottomOf="@+id/fullTimeEmployeesCostTextView" />
+
+        <TextView
+            android:id="@+id/totalCostTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Total cost"
+            card_view:layout_constraintEnd_toEndOf="@+id/partTimeEmployeesCostTextView"
+            card_view:layout_constraintStart_toStartOf="@+id/partTimeEmployeesCostTextView"
+            card_view:layout_constraintTop_toBottomOf="@+id/partTimeEmployeesCostTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>
